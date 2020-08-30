@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <div class="grid-master">
+
+    <div class="a1">
+      <div class="quadrado">
+        <div class="quadrado-logo">
+          <img class="quadrado-svg" src="images/logo-bonus.svg" alt="logo-bonus">
+        </div>
+        <div class="quadrado-score">12</div>
+      </div>
+    </div>
+
+
+
+    <div class="a2">
+      <div class="grid-penta">
+        <img class="penta" src="images/bg-pentagon.svg" alt="pen">
+
+      </div>
+
+      <div class="grid-roda">
+        <a href="win.html" onclick="location.href=this.href+'?key='+scrt_var;return false;">
+        <div class="b1" onclick="tesoura()">
+          <img class="tesoura" src="images/icon-scissors.svg" alt="">
+        </div>
+      </a>
+      </div>
+
+      <div class="grid-roda2">
+        <a href="win.html" onclick="location.href=this.href+'?key='+scrt_var2;return false;">
+          <div class="b2" onclick="spock()" >
+            <img class="tesoura" src="images/icon-spock.svg" alt="">
+          </div>
+        </a>
+      </div>
+
+      <div class="grid-roda3">
+        <a href="win.html" onclick="location.href=this.href+'?key='+scrt_var3;return false;">
+          <div class="b3" onclick="papel()">
+            <img class="tesoura" src="images/icon-paper.svg" alt="">
+          </div>
+        </a>
+      </div>
+
+      <div class="grid-roda4">
+        <a href="win.html" onclick="location.href=this.href+'?key='+scrt_var4;return false;">
+          <div class="b4" onclick="lagarto()">
+            <img class="tesoura" src="images/icon-lizard.svg" alt="">
+          </div>
+        </a>
+      </div>
+
+      <div class="grid-roda5">
+        <a href="win.html" onclick="location.href=this.href+'?key='+scrt_var5;return false;">
+          <div class="b5" onclick="pedra()">
+            <img class="tesoura" src="images/icon-rock.svg" alt="">
+          </div>
+        </a>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+    <div class="a3">
+      <div class="rules">RULES</div>
+      
+    </div>
+
+    
+  </div>
+
+
+
+
+  
+  
+<script src="script.js"></script>
+
+  <script>
+
+    var scrt_var = 1;
+    var scrt_var2 = 2;
+    var scrt_var3 = 3;
+    var scrt_var4 = 4;
+    var scrt_var5 = 5;
+
+  </script>
+
+
+
+</body>
+
+</html>
+
