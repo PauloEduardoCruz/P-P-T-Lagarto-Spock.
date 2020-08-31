@@ -104,14 +104,14 @@ body{
 
 
 .tesoura{
-    width: 30px;
+    width: 50px;
 }
 
 .grid-roda {
     color: black;
     position:absolute; 
-    top:35%; 
-    left: 20%;
+    top:30%; 
+    left: 10%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -128,8 +128,8 @@ body{
     grid-area: b1;
     background: rgb(255, 255, 255);
     border-radius: 100rem;
-    height: 60px;
-    width: 60px;
+    height: 100px;
+    width: 100px;
     border: solid 10px hsl(40, 84%, 53%);
 
     box-shadow: 1px 1px 1px red;
@@ -147,7 +147,7 @@ body{
 .grid-roda2 {
     color: black;
     position:absolute; 
-    top: 35%;
+    top: 30%;
     left: 60%;
     display: grid;
     grid-template-columns: 1fr;
@@ -166,8 +166,8 @@ body{
     grid-area: b1;
     background: rgb(255, 255, 255);
     border-radius: 100rem;
-    height: 60px;
-    width: 60px;
+    height: 100px;
+    width: 100px;
     border: solid 10px hsl(189, 58%, 57%);
     box-shadow: inset 0px 5px 5px 0px gray;
 }
@@ -213,7 +213,7 @@ body{
     color: black;
     position:absolute; 
     top:60%; 
-    left: 25%;
+    left: 10%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -321,8 +321,49 @@ body{
     letter-spacing: 5px;
     border-radius: 0.5rem;
     font-weight: 100;
-    border: solid 3px #606e85;
+    background: white;
     margin-top: 30%;
     padding: 10px 30px;
 
+}
+
+
+
+
+
+
+
+a:-webkit-any-link {
+    color: #3b4363;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.grid-resultado{
+    height: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.texto-resultado{
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+
+.grid-msg{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+
+    font-weight: 100;
+    font-size: 1rem;
+    letter-spacing: 5px;
+
+   text-transform: uppercase;
+    color: white; 
 }

@@ -18,12 +18,16 @@
   <div class="grid-master">
 
     <div class="a1">
+
       <div class="quadrado">
         <div class="quadrado-logo">
           <img class="quadrado-svg" src="images/logo-bonus.svg" alt="logo-bonus">
         </div>
         <div class="quadrado-score">12</div>
       </div>
+
+      <div  id="grid-msg" class="grid-msg"></div>
+
     </div>
 
 
@@ -32,19 +36,20 @@
 
 
       <div class="grid-roda">
-        <a href="https://pt.wikipedia.org/wiki/Pedra-papel-tesoura-lagarto-Spock">
-        <div class="b1" onclick="tesoura()">
-          <img class="tesoura" src="images/icon-scissors.svg" alt="">
+        <div id="b1" class="b1" onclick="tesoura()">
+          <img id="primeiro" class="tesoura" src="images/icon-scissors.svg" alt="">
         </div>
-      </a>
       </div>
 
       <div class="grid-roda2">
-        <div class="b2" onclick="spock()">
-          <img class="tesoura" src="images/icon-spock.svg" alt="">
+        <div id="b2" class="b2" onclick="spock()">
+          <img id="segunda" class="tesoura" src="images/icon-spock.svg" alt="">
         </div>
       </div>
 
+      <div class="grid-resultado">
+        <div id="texto-win" class="texto-resultado">YOU WIN</div>
+      </div>
 
 
 
@@ -56,8 +61,8 @@
 
 
     <div class="a3">
-      <a href="index.html">
-        <div class="rules">RULES</div>
+      <a href="index.html" onclick="location.href=this.href+'?key='+scrt_pt;return false;">
+        <div class="rules">PLAY AGAIN</div>
       </a>
     </div>
 
@@ -70,16 +75,10 @@
   
   
 <script src="winscript.js"></script>
+
 <script>
-
-
-
-
-
-
-
-
-
+  var scrt_pt = pontoss;
 </script>
+
 </body>
 </html>
