@@ -18,73 +18,69 @@
   <div class="grid-master">
 
     <div class="a1">
-      <div class="quadrado">
-        <div class="quadrado-logo">
-          <img class="quadrado-svg" src="images/logo-bonus.svg" alt="logo-bonus">
+      <a href="index.html">
+        <div class="quadrado">
+          <div class="quadrado-logo">
+            <img class="quadrado-svg" src="images/logo-bonus.svg" alt="logo-bonus">
+          </div>
+          <div class="quadrado-score">12</div>
         </div>
-        <div class="quadrado-score">12</div>
-      </div>
+      </a>
     </div>
 
 
 
     <div class="a2">
+
       <div class="grid-penta">
         <img class="penta" src="images/bg-pentagon.svg" alt="pen">
 
-      </div>
 
-      <div class="grid-roda">
-        <a href="win.html" onclick="location.href=this.href+'?key='+scrt_var+'?key='+scrt_pt;return false;">
-        <div class="b1" onclick="tesoura()">
-          <img class="tesoura" src="images/icon-scissors.svg" alt="">
+        <div class="grid-roda">
+            <button class="b1" onclick="tesoura()">
+              <img class="tesoura" src="images/icon-scissors.svg" alt="">
+            </button>
         </div>
-      </a>
-      </div>
 
-      <div class="grid-roda2">
-        <a href="win.html" onclick="location.href=this.href+'?key='+scrt_var2;return false;">
-          <div class="b2" onclick="spock()" >
-            <img class="tesoura" src="images/icon-spock.svg" alt="">
-          </div>
-        </a>
-      </div>
 
-      <div class="grid-roda3">
-        <a href="win.html" onclick="location.href=this.href+'?key='+scrt_var3;return false;">
-          <div class="b3" onclick="papel()">
-            <img class="tesoura" src="images/icon-paper.svg" alt="">
-          </div>
-        </a>
-      </div>
+        <div class="grid-roda2">
+            <button class="b2" onclick="spock()">
+              <img class="tesoura" src="images/icon-spock.svg" alt="">
+            </button>
+        </div>
 
-      <div class="grid-roda4">
-        <a href="win.html" onclick="location.href=this.href+'?key='+scrt_var4;return false;">
-          <div class="b4" onclick="lagarto()">
-            <img class="tesoura" src="images/icon-lizard.svg" alt="">
-          </div>
-        </a>
-      </div>
 
-      <div class="grid-roda5">
-        <a href="win.html" onclick="location.href=this.href+'?key='+scrt_var5;return false;">
-          <div class="b5" onclick="pedra()">
-            <img class="tesoura" src="images/icon-rock.svg" alt="">
-          </div>
-        </a>
-      </div>
+        <div class="grid-roda3">
+            <button class="b3" onclick="papel()">
+              <img class="tesoura" src="images/icon-paper.svg" alt="">
+            </button>
+        </div>
 
+
+        <div class="grid-roda4">
+            <button class="b4" onclick="lagarto()">
+              <img class="tesoura" src="images/icon-lizard.svg" alt="">
+            </button>
+        </div>
+
+
+        <div class="grid-roda5">
+
+            <button class="b5" onclick="pedra()">
+              <img class="tesoura" src="images/icon-rock.svg" alt="">
+            </button>
+
+        </div>
+
+      </div>
 
     </div>
 
 
 
 
-
-
     <div class="a3">
-      <div class="rules">RULES</div>
-      
+      <div class="rules">GO!</div>
     </div>
 
     
@@ -95,10 +91,34 @@
 <div id="modal-promocao" class="modal-container">
   <div class="modal">
     <button class="fechar">X</button>
-    <h3>Cadastrese na neleter</h3>
-    <form >
-      <input type="button" value="Play Again">
-    </form>
+
+    <div class="grid-msg">
+      vem de frase dale
+    </div>
+
+    <div class="grid-rodaW1">
+      <div id="b1" class="b1">
+        <img id="primeiro" class="tesoura" src="images/icon-scissors.svg" alt="">
+      </div>
+
+      <div>
+        vs
+      </div>
+
+      <div id="b2" class="b2">
+        <img id="segunda" class="tesoura" src="images/icon-spock.svg" alt="">
+      </div>
+
+  </div>
+
+
+<div class="grid-bt-playAgain">
+  <button class="bt-playAgain">
+    PLAY AGAIN
+  </button>
+</div>
+
+
   </div>
 </div>
 
@@ -107,7 +127,7 @@
 
   
   
-<script src=""></script>
+<script src="winscript.js"></script>
 
   <script>
 
@@ -137,8 +157,9 @@
       }
     }
 
-    var logo = document.querySelector('.rules') 
-    logo.addEventListener('click', () => iniciaModal('modal-promocao'))
+    var play = document.querySelector('.rules') 
+    play.addEventListener('click', () => iniciaModal('modal-promocao'))
+
 
 
 
