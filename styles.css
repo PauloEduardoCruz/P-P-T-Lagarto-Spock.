@@ -329,3 +329,87 @@ body{
     padding: 10px 30px;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.mostrar{
+    display: flex;
+}
+
+
+.modal{
+    color: black;
+    background: white;
+
+    width: 60%;
+    min-width: 100px;
+
+    padding: 40px;
+    border: 10px solid tan;
+    box-shadow: 0 0 0 10px white;
+    position: relative;
+}
+
+@keyframes modal{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mostrar .modal{
+    animation: modal .3s;
+}
+
+
+.fechar{
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: tan;
+    color: white;
+    cursor: pointer;
+    
+}
+
+

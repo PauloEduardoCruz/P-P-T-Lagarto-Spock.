@@ -92,6 +92,18 @@
 
 
 
+<div id="modal-promocao" class="modal-container">
+  <div class="modal">
+    <button class="fechar">X</button>
+    <h3>Cadastrese na neleter</h3>
+    <form >
+      <input type="button" value="Play Again">
+    </form>
+  </div>
+</div>
+
+
+
 
   
   
@@ -109,8 +121,31 @@
     var scrt_pt = 0;
 
 
+
+
+
+    function iniciaModal(modalID) {
+      var modal = document.getElementById(modalID)
+        //esse if é so pra nao dar erro
+        if(modal){
+        modal.classList.add('mostrar')
+        modal.addEventListener('click', (e) => {
+          if(e.target.id == modalID || e.target.className == 'fechar'){
+            modal.classList.remove('mostrar')
+          }
+        })
+      }
+    }
+
+    var logo = document.querySelector('.rules') 
+    logo.addEventListener('click', () => iniciaModal('modal-promocao'))
+
+
+
   </script>
 
+
+  
 
 
 </body>
