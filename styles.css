@@ -1,7 +1,5 @@
 body{
-    
     background: radial-gradient(circle farthest-corner at center 0, rgba(31,55,86,1) 25%, rgba(20,21,57,1) 100%);
-    height: 100vh;
 
     color: white;
 
@@ -10,12 +8,7 @@ body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
-
-
-
 }
-
 
 
 .grid-master {
@@ -31,18 +24,11 @@ body{
   
 
   
-
-
-
 .quadrado{
-    text-align: center;
-
     border: solid 3px 	#606e85;
     border-radius: 0.5rem;
     padding: 10px;
-
     margin: 20px;
-
     display: flex;
     justify-content: space-between;
 }
@@ -66,59 +52,54 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-
-
-
-
-
-
-
-
-
 
 .a2 { 
     grid-area: a2;
     display: flex;
     align-items: center;
     justify-content: center;
-    
     position: relative;
-
-
-
-
-    
-
-
-
-
 }
 
 .penta{
     width: 200px;
-
     text-align: center;
 }
 
 .grid-penta{
-
     display: flex;
     align-items: center;
-
     justify-content: center;
-
-
     position: relative;
 }
 
 
-
-
+/*TAMANHO DAS SVG*/
 .tesoura{
     width: 30px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .grid-roda {
     color: black;
@@ -133,7 +114,6 @@ body{
 }
 
 .b1 { 
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,10 +129,7 @@ body{
     box-shadow: inset 0px 5px 5px 0px gray;
 
     outline: 0;
-
 }
-
-
 
 
 
@@ -171,9 +148,7 @@ body{
     grid-template-areas: "b1";
 }
 
-  
 .b2 { 
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,8 +165,9 @@ body{
 
 
 
-.grid-roda3 {
 
+
+.grid-roda3 {
     color: black;
     position:absolute; 
     top: 15%; 
@@ -203,9 +179,7 @@ body{
     grid-template-areas: "b1";
 }
 
-  
 .b3 { 
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,9 +198,7 @@ body{
 
 
 
-
 .grid-roda4 {
-
     color: black;
     position:absolute; 
     top: 85%; 
@@ -236,13 +208,9 @@ body{
     grid-template-rows: 1fr;
     gap: 1px 1px;
     grid-template-areas: "b1";
-
-
 }
 
-  
 .b4 { 
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -259,8 +227,10 @@ body{
 }
 
 
-.grid-roda5 {
 
+
+
+.grid-roda5 {
     color: black;
     position:absolute; 
     top: 85%; 
@@ -270,12 +240,9 @@ body{
     grid-template-rows: 1fr;
     gap: 1px 1px;
     grid-template-areas: "b1";
-
 }
 
-  
 .b5 { 
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -311,26 +278,6 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .a3 { 
     grid-area: a3;
     display: flex;
@@ -344,29 +291,9 @@ body{
     border-radius: 0.5rem;
     font-weight: 100;
     border: solid 3px #606e85;
-    margin-top: 30%;
+    margin-top: 30PX;
     padding: 10px 30px;
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .modal-container{
     width: 100vw;
@@ -387,14 +314,11 @@ body{
     display: flex;
 }
 
-
 .modal{
     color: black;
     background: white;
-
     width: 60%;
     min-width: 100px;
-
     padding: 40px;
     border: 10px solid tan;
     box-shadow: 0 0 0 10px white;
@@ -416,7 +340,6 @@ body{
     animation: modal .3s;
 }
 
-
 .fechar{
     position: absolute;
     top: -30px;
@@ -428,48 +351,29 @@ body{
     background: tan;
     color: white;
     cursor: pointer;
-    
 }
 
-
-
-
-
-
-
 .grid-rodaW1 {
-
     display: flex;
     align-items: center;
     justify-content: center;
     justify-content: space-between;
 }
 
-
-
 .grid-msg{
     margin-bottom: 30px;
-
     display: flex;
     align-items: flex-end;
     justify-content: center;
-
-
     font-weight: 100;
     font-size: 1rem;
-    letter-spacing: 5px;
-
-   text-transform: uppercase;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     color: rgb(0, 0, 0); 
 }
 
-
-
-
-
 .grid-bt-playAgain{
     margin-top: 30px;
-
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -483,3 +387,15 @@ body{
     cursor: pointer;
     outline: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+

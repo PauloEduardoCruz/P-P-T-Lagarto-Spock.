@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
 
+  <title>Rock, Paper, Scissors</title>
 
   <link rel="stylesheet" href="styles.css">
 
 </head>
+
+
+
+
+
+
+
+
+
+
 <body>
 
   <div class="grid-master">
@@ -30,146 +42,133 @@
 
 
 
+
+
     <div class="a2">
 
       <div class="grid-penta">
         <img class="penta" src="images/bg-pentagon.svg" alt="pen">
 
-
         <div class="grid-roda">
-            <button class="b1" onclick="tesoura()">
-              <img class="tesoura" src="images/icon-scissors.svg" alt="">
-            </button>
+          <button class="b1" onclick="tesoura()">
+            <img class="tesoura" src="images/icon-scissors.svg" alt="">
+          </button>
         </div>
-
 
         <div class="grid-roda2">
-            <button class="b2" onclick="spock()">
-              <img class="tesoura" src="images/icon-spock.svg" alt="">
-            </button>
+          <button class="b2" onclick="spock()">
+            <img class="tesoura" src="images/icon-spock.svg" alt="">
+          </button>
         </div>
-
 
         <div class="grid-roda3">
-            <button class="b3" onclick="papel()">
-              <img class="tesoura" src="images/icon-paper.svg" alt="">
-            </button>
+          <button class="b3" onclick="papel()">
+            <img class="tesoura" src="images/icon-paper.svg" alt="">
+          </button>
         </div>
-
 
         <div class="grid-roda4">
-            <button class="b4" onclick="lagarto()">
-              <img class="tesoura" src="images/icon-lizard.svg" alt="">
-            </button>
+          <button class="b4" onclick="lagarto()">
+            <img class="tesoura" src="images/icon-lizard.svg" alt="">
+          </button>
         </div>
 
-
         <div class="grid-roda5">
-
-            <button class="b5" onclick="pedra()">
-              <img class="tesoura" src="images/icon-rock.svg" alt="">
-            </button>
-
+          <button class="b5" onclick="pedra()">
+            <img class="tesoura" src="images/icon-rock.svg" alt="">
+          </button>
         </div>
 
       </div>
 
     </div>
+
 
 
 
 
     <div class="a3">
-      <div class="rules">GO!</div>
+      <div class="rules" onclick="bigF()">GO!</div>
     </div>
 
-    
   </div>
 
 
 
-<div id="modal-promocao" class="modal-container">
-  <div class="modal">
-    <button class="fechar">X</button>
+  <div id="modal-promocao" class="modal-container">
+    <div class="modal">
+      <button class="fechar">X</button>
 
-    <div class="grid-msg">
-      vem de frase dale
+      <div class="grid-msg" id="grid-msg">
+        vem de frase dale
+      </div>
+
+      <div class="grid-rodaW1">
+        <div id="b1" class="b1">
+          <img id="primeiro" class="tesoura" src="images/icon-scissors.svg" alt="">
+        </div>
+
+        <div>
+          vs
+        </div>
+
+        <div id="b2" class="b2">
+          <img id="segunda" class="tesoura" src="images/icon-spock.svg" alt="">
+        </div>
+
+      </div>
+
+
+      <div class="grid-bt-playAgain">
+        <button class="bt-playAgain">
+          PLAY AGAIN
+        </button>
+      </div>
+
+
     </div>
-
-    <div class="grid-rodaW1">
-      <div id="b1" class="b1">
-        <img id="primeiro" class="tesoura" src="images/icon-scissors.svg" alt="">
-      </div>
-
-      <div>
-        vs
-      </div>
-
-      <div id="b2" class="b2">
-        <img id="segunda" class="tesoura" src="images/icon-spock.svg" alt="">
-      </div>
-
   </div>
 
 
-<div class="grid-bt-playAgain">
-  <button class="bt-playAgain">
-    PLAY AGAIN
-  </button>
-</div>
-
-
-  </div>
-</div>
 
 
 
 
-  
-  
-<script src="winscript.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="winscript.js"></script>
 
   <script>
-
-    var scrt_var = 1;
-    var scrt_var2 = 2;
-    var scrt_var3 = 3;
-    var scrt_var4 = 4;
-    var scrt_var5 = 5;
-
-
-    var scrt_pt = 0;
-
-
-
-
-
     function iniciaModal(modalID) {
       var modal = document.getElementById(modalID)
-        //esse if é so pra nao dar erro
-        if(modal){
+      //esse if é so pra nao dar erro
+      if (modal) {
         modal.classList.add('mostrar')
         modal.addEventListener('click', (e) => {
-          if(e.target.id == modalID || e.target.className == 'fechar'){
+          if (e.target.id == modalID || e.target.className == 'fechar') {
             modal.classList.remove('mostrar')
           }
         })
       }
     }
 
-    var play = document.querySelector('.rules') 
+    var play = document.querySelector('.rules')
     play.addEventListener('click', () => iniciaModal('modal-promocao'))
-
-
-
-
   </script>
 
 
-  
-
-
 </body>
-
 </html>
 
