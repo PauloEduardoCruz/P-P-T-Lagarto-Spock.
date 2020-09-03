@@ -78,6 +78,7 @@ body{
 /*TAMANHO DAS SVG*/
 .tesoura{
     width: 30px;
+    filter: drop-shadow(0px 0px 1px rgb(0, 0, 0));
 }
 
 
@@ -119,17 +120,29 @@ body{
     justify-content: center;
 
     grid-area: b1;
-    background: rgb(255, 255, 255);
+
     border-radius: 100rem;
     height: 80px;
     width: 80px;
-    border: solid 10px hsl(40, 84%, 53%);
 
-    box-shadow: 1px 1px 1px red;
-    box-shadow: inset 0px 5px 5px 0px gray;
+    background: #333;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
 
     outline: 0;
+
 }
+
+.b1:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5), inset 0px 5px 5px 0px black, 0px 0px 0px 3px #8bff00;
+    transition: .2s;
+}
+
+
+
 
 
 
@@ -152,18 +165,25 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-
     grid-area: b1;
-    background: rgb(255, 255, 255);
     border-radius: 100rem;
     height: 80px;
     width: 80px;
-    border: solid 10px hsl(189, 58%, 57%);
-    box-shadow: inset 0px 5px 5px 0px gray;
+
     outline: 0;
+
+    background: #333;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
 }
 
-
+.b2:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5), inset 0px 5px 5px 0px black, 0px 0px 0px 3px #8bff00;
+    transition: .2s;
+}
 
 
 
@@ -185,13 +205,22 @@ body{
     justify-content: center;
 
     grid-area: b1;
-    background: rgb(255, 255, 255);
     border-radius: 100rem;
     height: 80px;
     width: 80px;
-    border: solid 10px hsl(230, 89%, 65%);
-    box-shadow: inset 0px 5px 5px 0px gray;
     outline: 0;
+
+    background: #333;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+}
+
+.b3:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5), inset 0px 5px 5px 0px black, 0px 0px 0px 3px #8bff00;
+    transition: .2s;
 }
 
 
@@ -216,16 +245,22 @@ body{
     justify-content: center;
 
     grid-area: b1;
-    background: rgb(255, 255, 255);
     border-radius: 100rem;
     height: 80px;
-    width: 80px;
-    border: solid 10px hsl(261, 72%, 63%);
-    box-shadow: inset 0px 5px 5px 0px gray;
-    
+    width: 80px; 
     outline: 0;
-}
 
+    background: #333;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+}
+.b4:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5), inset 0px 5px 5px 0px black, 0px 0px 0px 3px #8bff00;
+    transition: .2s;
+}
 
 
 
@@ -248,15 +283,22 @@ body{
     justify-content: center;
 
     grid-area: b1;
-    background: rgb(255, 255, 255);
     border-radius: 100rem;
     height: 80px;
     width: 80px;
-    border: solid 10px hsl(349, 70%, 56%);
-    box-shadow: inset 0px 5px 5px 0px gray;
     outline: 0;
-}
 
+    background: #333;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+}
+.b5:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5), inset 0px 5px 5px 0px black, 0px 0px 0px 3px #8bff00;
+    transition: .2s;
+}
 
 
 
@@ -315,14 +357,22 @@ body{
 }
 
 .modal{
-    color: black;
-    background: white;
+    background: radial-gradient(circle farthest-corner at center 0, rgba(31,55,86,1) 25%, rgba(20,21,57,1) 100%);
+
+
     width: 60%;
     min-width: 100px;
     padding: 40px;
     border: 10px solid tan;
     box-shadow: 0 0 0 10px white;
     position: relative;
+
+
+    border-width: 3px;
+    border-radius: 10%;
+    border-color: buttonface;
+    border-image: initial;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
 }
 
 @keyframes modal{
@@ -340,18 +390,7 @@ body{
     animation: modal .3s;
 }
 
-.fechar{
-    position: absolute;
-    top: -30px;
-    right: -30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 4px solid white;
-    background: tan;
-    color: white;
-    cursor: pointer;
-}
+
 
 .grid-rodaW1 {
     display: flex;
@@ -369,7 +408,7 @@ body{
     font-size: 1rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: rgb(0, 0, 0); 
+    color: white; 
 }
 
 .grid-bt-playAgain{
@@ -380,12 +419,18 @@ body{
 }
 
 .bt-playAgain{
-    font-size: 1.5rem;
-    border: 4px solid white;
-    background: tan;
+
     color: white;
     cursor: pointer;
     outline: 0;
+
+    font-size: 1rem;
+    letter-spacing: 5px;
+    border-radius: 0.5rem;
+    font-weight: 100;
+    border: solid 3px #606e85;
+    padding: 10px 30px;
+    background: #00ffff00;
 }
 
 

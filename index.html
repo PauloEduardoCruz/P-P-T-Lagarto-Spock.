@@ -30,14 +30,12 @@
   <div class="grid-master">
 
     <div class="a1">
-      <a href="index.html">
         <div class="quadrado">
           <div class="quadrado-logo">
             <img class="quadrado-svg" src="images/logo-bonus.svg" alt="logo-bonus">
           </div>
-          <div class="quadrado-score">12</div>
+          <div class="quadrado-score" id="quadrado-score">0</div>
         </div>
-      </a>
     </div>
 
 
@@ -97,10 +95,9 @@
 
   <div id="modal-promocao" class="modal-container">
     <div class="modal">
-      <button class="fechar">X</button>
 
       <div class="grid-msg" id="grid-msg">
-        vem de frase dale
+        faça uma jogada
       </div>
 
       <div class="grid-rodaW1">
@@ -157,7 +154,7 @@
       if (modal) {
         modal.classList.add('mostrar')
         modal.addEventListener('click', (e) => {
-          if (e.target.id == modalID || e.target.className == 'fechar') {
+          if (e.target.id == modalID || e.target.className == 'bt-playAgain') {
             modal.classList.remove('mostrar')
           }
         })

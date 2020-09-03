@@ -1,7 +1,9 @@
-var jogador=10, pc=150;
+var jogador=10, pc=150, pontos=0;
+console.log("pontos: ", pontos)
 
 var rst=0;
 var msg = window.document.getElementById('grid-msg')
+var pts = window.document.getElementById('quadrado-score')
 // tesoura  1
 // Spock    2
 // Papel    3
@@ -47,7 +49,8 @@ function pedra() {
 function bigF() {
     if (jogador == 1) {
 
-        document.getElementById('b1').style.border = "10px solid #eca922";
+        document.getElementById('b1').style.border = "5px solid #5ba700";
+        document.getElementById('b2').style.border = "5px solid #dd405d";
 
         pc = Math.floor(Math.random() * 5) + 1
         console.log('Jogador:', jogador)
@@ -56,30 +59,27 @@ function bigF() {
         switch (pc) {
             case 1:
                 document.getElementById('segunda').src = "images/icon-scissors.svg";
-                document.getElementById('b2').style.border = "10px solid #eca922";
                 break;
             case 2:
                 document.getElementById('segunda').src = "images/icon-spock.svg";
-                document.getElementById('b2').style.border = "10px solid #52bed1";
                 break;
             case 3:
                 document.getElementById('segunda').src = "images/icon-paper.svg";
-                document.getElementById('b2').style.border = "10px solid #5671f5";
                 break;
             case 4:
                 document.getElementById('segunda').src = "images/icon-lizard.svg";
-                document.getElementById('b2').style.border = "10px solid #8c5de5";
                 break;
             case 5:
                 document.getElementById('segunda').src = "images/icon-rock.svg";
-                document.getElementById('b2').style.border = "10px solid #dd405d";
                 break;
         }
 
+        rst = 0;
         if (jogador == pc) {
             console.log('EMPATE')
             msg.innerHTML = `EMPATE`
         } else {
+            rst = 7;
             switch (pc) {
                 case 2:
                     console.log('Spock derrete tesoura')
@@ -102,17 +102,28 @@ function bigF() {
             }
         }
 
-        /*  
-            if(rst==1){
-                var res = window.document.getElementById('texto-win')
-                res.innerHTML = `YOU LOSE`  
-            }
-    
-            if (jogador == pc) {
-                var res = window.document.getElementById('texto-win')
-                res.innerHTML = `DRAW` 
-            }
-        */
+        document.getElementById('b2').style.boxShadow = "0px 0px 20px 0px #00000080";
+        document.getElementById('b1').style.boxShadow = "0px 0px 0px 1px #fff, 0px 0px 20px 0px #00000080";
+        
+        if(rst==7){
+            pontos++
+        }
+
+        if(rst==1){
+            //Perde recebe isso
+            document.getElementById('b1').style.boxShadow = "0px 0px 20px 0px #00000080";
+            //ganha recebe isso
+            document.getElementById('b2').style.boxShadow = "0px 0px 0px 1px #fff, 0px 0px 20px 0px #00000080";
+            pontos--
+        }
+
+        if (jogador == pc) {
+            document.getElementById('b1').style.boxShadow = "0px 0px 20px 0px #00000080";
+            document.getElementById('b2').style.boxShadow = "0px 0px 20px 0px #00000080";
+        }
+        //mudando pontos
+        console.log("pontos: ", pontos)
+        pts.innerHTML = `${pontos}`
     }
 
 
@@ -129,7 +140,9 @@ function bigF() {
     if (jogador == 2) {
 
         document.getElementById('primeiro').src = "images/icon-spock.svg";
-        document.getElementById('b1').style.border = "10px solid #52bed1";
+
+        document.getElementById('b1').style.border = "5px solid #5ba700";
+        document.getElementById('b2').style.border = "5px solid #dd405d";
 
         pc = Math.floor(Math.random() * 5) + 1
         console.log('Jogador:', jogador)
@@ -138,30 +151,27 @@ function bigF() {
         switch (pc) {
             case 1:
                 document.getElementById('segunda').src = "images/icon-scissors.svg";
-                document.getElementById('b2').style.border = "10px solid #eca922";
                 break;
             case 2:
                 document.getElementById('segunda').src = "images/icon-spock.svg";
-                document.getElementById('b2').style.border = "10px solid #52bed1";
                 break;
             case 3:
                 document.getElementById('segunda').src = "images/icon-paper.svg";
-                document.getElementById('b2').style.border = "10px solid #5671f5";
                 break;
             case 4:
                 document.getElementById('segunda').src = "images/icon-lizard.svg";
-                document.getElementById('b2').style.border = "10px solid #8c5de5";
                 break;
             case 5:
                 document.getElementById('segunda').src = "images/icon-rock.svg";
-                document.getElementById('b2').style.border = "10px solid #dd405d";
                 break;
         }
 
+        rst = 0;
         if (jogador == pc) {
             console.log('EMPATE')
             msg.innerHTML = `EMPATE`
         } else {
+            rst = 7;
             switch (pc) {
                 case 1:
                     console.log('Spock derrete tesoura')
@@ -170,12 +180,12 @@ function bigF() {
                 case 3:
                     console.log('Papel refuta Spock')
                     msg.innerHTML = `Papel refuta Spock`
-                    //rst = 1;
+                    rst = 1;
                     break;
                 case 4:
                     console.log('Lagarto envenena Spock')
                     msg.innerHTML = `Lagarto envenena Spock`
-                    //rst = 1;
+                    rst = 1;
                     break;
                 case 5:
                     console.log('Spock vaporiza pedra')
@@ -184,17 +194,29 @@ function bigF() {
             }
         }
 
-        /*  
-            if(rst==1){
-                var res = window.document.getElementById('texto-win')
-                res.innerHTML = `YOU LOSE`  
-            }
+        document.getElementById('b2').style.boxShadow = "0px 0px 20px 0px #00000080";
+        document.getElementById('b1').style.boxShadow = "0px 0px 0px 1px #fff, 0px 0px 20px 0px #00000080";
         
-            if (jogador == pc) {
-                var res = window.document.getElementById('texto-win')
-                res.innerHTML = `DRAW` 
-            }
-        */
+        if(rst==7){
+            pontos++
+        }
+
+        if(rst==1){
+            //Perde recebe isso
+            document.getElementById('b1').style.boxShadow = "0px 0px 20px 0px #00000080";
+            //ganha recebe isso
+            document.getElementById('b2').style.boxShadow = "0px 0px 0px 1px #fff, 0px 0px 20px 0px #00000080";
+            pontos--
+        }
+
+        if (jogador == pc) {
+            document.getElementById('b1').style.boxShadow = "0px 0px 20px 0px #00000080";
+            document.getElementById('b2').style.boxShadow = "0px 0px 20px 0px #00000080";
+        }
+
+        //mudando pontos
+        console.log("pontos: ", pontos)
+        pts.innerHTML = `${pontos}`
     }
 
 
@@ -211,7 +233,9 @@ function bigF() {
     if (jogador == 3) {
 
         document.getElementById('primeiro').src = "images/icon-paper.svg";
-        document.getElementById('b1').style.border = "10px solid #5671f5";
+
+        document.getElementById('b1').style.border = "5px solid #5ba700";
+        document.getElementById('b2').style.border = "5px solid #dd405d";
 
         pc = Math.floor(Math.random() * 5) + 1
         console.log('Jogador:', jogador)
@@ -220,30 +244,27 @@ function bigF() {
         switch (pc) {
             case 1:
                 document.getElementById('segunda').src = "images/icon-scissors.svg";
-                document.getElementById('b2').style.border = "10px solid #eca922";
                 break;
             case 2:
                 document.getElementById('segunda').src = "images/icon-spock.svg";
-                document.getElementById('b2').style.border = "10px solid #52bed1";
                 break;
             case 3:
                 document.getElementById('segunda').src = "images/icon-paper.svg";
-                document.getElementById('b2').style.border = "10px solid #5671f5";
                 break;
             case 4:
                 document.getElementById('segunda').src = "images/icon-lizard.svg";
-                document.getElementById('b2').style.border = "10px solid #8c5de5";
                 break;
             case 5:
                 document.getElementById('segunda').src = "images/icon-rock.svg";
-                document.getElementById('b2').style.border = "10px solid #dd405d";
                 break;
         }
 
+        rst = 0;
         if (jogador == pc) {
             console.log('EMPATE')
             msg.innerHTML = `EMPATE`
         } else {
+            rst = 7;
             switch (pc) {
                 case 1:
                     console.log('Tesoura corta papel')
@@ -266,17 +287,28 @@ function bigF() {
             }
         }
 
-        /*
-            if(rst==1){
-                var res = window.document.getElementById('texto-win')
-                res.innerHTML = `YOU LOSE`  
-            }
+        document.getElementById('b2').style.boxShadow = "0px 0px 20px 0px #00000080";
+        document.getElementById('b1').style.boxShadow = "0px 0px 0px 1px #fff, 0px 0px 20px 0px #00000080";
         
-            if (jogador == pc) {
-                var res = window.document.getElementById('texto-win')
-                res.innerHTML = `DRAW` 
-            }
-        */
+        if(rst==7){
+            pontos++
+        }
+
+        if(rst==1){
+            //Perde recebe isso
+            document.getElementById('b1').style.boxShadow = "0px 0px 20px 0px #00000080";
+            //ganha recebe isso
+            document.getElementById('b2').style.boxShadow = "0px 0px 0px 1px #fff, 0px 0px 20px 0px #00000080";
+            pontos--
+        }
+
+        if (jogador == pc) {
+            document.getElementById('b1').style.boxShadow = "0px 0px 20px 0px #00000080";
+            document.getElementById('b2').style.boxShadow = "0px 0px 20px 0px #00000080";
+        }
+        //mudando pontos
+        console.log("pontos: ", pontos)
+        pts.innerHTML = `${pontos}`
     }
 
 
@@ -293,7 +325,9 @@ function bigF() {
     if (jogador == 4) {
 
         document.getElementById('primeiro').src = "images/icon-lizard.svg";
-        document.getElementById('b1').style.border = "10px solid #8c5de5";
+
+        document.getElementById('b1').style.border = "5px solid #5ba700";
+        document.getElementById('b2').style.border = "5px solid #dd405d";
 
         pc = Math.floor(Math.random() * 5) + 1
         console.log('Jogador:', jogador)
@@ -302,35 +336,32 @@ function bigF() {
         switch (pc) {
             case 1:
                 document.getElementById('segunda').src = "images/icon-scissors.svg";
-                document.getElementById('b2').style.border = "10px solid #eca922";
                 break;
             case 2:
                 document.getElementById('segunda').src = "images/icon-spock.svg";
-                document.getElementById('b2').style.border = "10px solid #52bed1";
                 break;
             case 3:
                 document.getElementById('segunda').src = "images/icon-paper.svg";
-                document.getElementById('b2').style.border = "10px solid #5671f5";
                 break;
             case 4:
                 document.getElementById('segunda').src = "images/icon-lizard.svg";
-                document.getElementById('b2').style.border = "10px solid #8c5de5";
                 break;
             case 5:
                 document.getElementById('segunda').src = "images/icon-rock.svg";
-                document.getElementById('b2').style.border = "10px solid #dd405d";
                 break;
         }
 
+        rst = 0;
         if (jogador == pc) {
             console.log('EMPATE')
             msg.innerHTML = `EMPATE`
         } else {
+            rst = 7;
             switch (pc) {
                 case 1:
                     console.log('Tesoura decapita lagarto')
                     msg.innerHTML = `Tesoura decapita lagarto`
-                    //rst = 1;
+                    rst = 1;
                     break;
                 case 2:
                     console.log('Lagarto envenena Spock')
@@ -343,22 +374,33 @@ function bigF() {
                 case 5:
                     console.log('Pedra esmaga lagarto')
                     msg.innerHTML = `Pedra esmaga lagarto`
-                    //rst = 1;
+                    rst = 1;
                     break;
             }
         }
 
-        /*
+        document.getElementById('b2').style.boxShadow = "0px 0px 20px 0px #00000080";
+        document.getElementById('b1').style.boxShadow = "0px 0px 0px 1px #fff, 0px 0px 20px 0px #00000080";
+        
+        if(rst==7){
+            pontos++
+        }
+
         if(rst==1){
-            var res = window.document.getElementById('texto-win')
-            res.innerHTML = `YOU LOSE`  
+            //Perde recebe isso
+            document.getElementById('b1').style.boxShadow = "0px 0px 20px 0px #00000080";
+            //ganha recebe isso
+            document.getElementById('b2').style.boxShadow = "0px 0px 0px 1px #fff, 0px 0px 20px 0px #00000080";
+            pontos--
         }
-    
+
         if (jogador == pc) {
-            var res = window.document.getElementById('texto-win')
-            res.innerHTML = `DRAW` 
+            document.getElementById('b1').style.boxShadow = "0px 0px 20px 0px #00000080";
+            document.getElementById('b2').style.boxShadow = "0px 0px 20px 0px #00000080";
         }
-        */
+        //mudando pontos
+        console.log("pontos: ", pontos)
+        pts.innerHTML = `${pontos}`
     }
 
 
@@ -375,7 +417,11 @@ function bigF() {
     if (jogador == 5) {
 
         document.getElementById('primeiro').src = "images/icon-rock.svg";
-        document.getElementById('b1').style.border = "10px solid #dd405d";
+
+        document.getElementById('b1').style.border = "5px solid #5ba700";
+        document.getElementById('b2').style.border = "5px solid #dd405d";
+
+
 
         pc = Math.floor(Math.random() * 5) + 1
         console.log('Jogador:', jogador)
@@ -385,30 +431,27 @@ function bigF() {
         switch (pc) {
             case 1:
                 document.getElementById('segunda').src = "images/icon-scissors.svg";
-                document.getElementById('b2').style.border = "10px solid #eca922";
                 break;
             case 2:
                 document.getElementById('segunda').src = "images/icon-spock.svg";
-                document.getElementById('b2').style.border = "10px solid #52bed1";
                 break;
             case 3:
                 document.getElementById('segunda').src = "images/icon-paper.svg";
-                document.getElementById('b2').style.border = "10px solid #5671f5";
                 break;
             case 4:
                 document.getElementById('segunda').src = "images/icon-lizard.svg";
-                document.getElementById('b2').style.border = "10px solid #8c5de5";
                 break;
             case 5:
                 document.getElementById('segunda').src = "images/icon-rock.svg";
-                document.getElementById('b2').style.border = "10px solid #dd405d";
                 break;
         }
 
+        rst = 0;
         if (jogador == pc) {
             console.log('EMPATE')
             msg.innerHTML = `EMPATE`
         } else {
+            rst = 7;
             switch (pc) {
                 case 1:
                     console.log('Pedra amassa tesoura')
@@ -417,12 +460,12 @@ function bigF() {
                 case 2:
                     console.log('Spock vaporiza pedra')
                     msg.innerHTML = `Spock vaporiza pedra`
-                    //rst = 1;
+                    rst = 1;
                     break;
                 case 3:
                     console.log('Papel cobre pedra')
                     msg.innerHTML = `Papel cobre pedra`
-                    //rst = 1;
+                    rst = 1;
                     break;
                 case 4:
                     console.log('Pedra esmaga lagarto')
@@ -431,17 +474,29 @@ function bigF() {
             }
         }
 
-        /*
+
+        document.getElementById('b2').style.boxShadow = "0px 0px 20px 0px #00000080";
+        document.getElementById('b1').style.boxShadow = "0px 0px 0px 1px #fff, 0px 0px 20px 0px #00000080";
+        
+        if(rst==7){
+            pontos++
+        }
+
         if(rst==1){
-            var res = window.document.getElementById('texto-win')
-            res.innerHTML = `YOU LOSE`  
+            //Perde recebe isso
+            document.getElementById('b1').style.boxShadow = "0px 0px 20px 0px #00000080";
+            //ganha recebe isso
+            document.getElementById('b2').style.boxShadow = "0px 0px 0px 1px #fff, 0px 0px 20px 0px #00000080";
+            pontos--
         }
 
         if (jogador == pc) {
-            var res = window.document.getElementById('texto-win')
-            res.innerHTML = `DRAW` 
+            document.getElementById('b1').style.boxShadow = "0px 0px 20px 0px #00000080";
+            document.getElementById('b2').style.boxShadow = "0px 0px 20px 0px #00000080";
         }
-        */
+        //mudando pontos
+        console.log("pontos: ", pontos)
+        pts.innerHTML = `${pontos}`
 
     }
 }
